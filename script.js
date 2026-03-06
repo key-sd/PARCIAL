@@ -1,3 +1,16 @@
+
+// Botón Eliminar
+const eliminar = document.querySelectorAll(".btn-eliminar");
+eliminar.forEach(boton => {
+    boton.addEventListener("click", function() {
+
+        const tarjeta = this.closest(".tarjeta");
+        tarjeta.remove();
+
+    });
+});
+
+// FORMULARIO
 const nombre = document.getElementById("campo-nombre");
 const docente = document.getElementById("campo-docente");
 const duracion = document.getElementById("duracion-curso");
