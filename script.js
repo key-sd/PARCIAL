@@ -1,38 +1,45 @@
-
-// Botón Eliminar
-const eliminar = document.querySelectorAll(".btn-eliminar");
-eliminar.forEach(boton => {
-    boton.addEventListener("click", function() {
-
-        const tarjeta = this.closest(".tarjeta");
-        tarjeta.remove();
-
-    });
-});
-
-// FORMULARIO
 const nombre = document.getElementById("campo-nombre");
 const docente = document.getElementById("campo-docente");
 const duracion = document.getElementById("duracion-curso");
-const boton = document.getElementById("agg-curso");
+const botonAgregar = document.getElementById("agg-curso");
 
-boton.addEventListener("click", function(){
+const contenedorCursos = document.querySelector("#curso .cursos .contenedor-curso");
 
-    // Validar nombre
-    if(nombre.value.trim().length < 3){
-        nombre.value = "";
-        nombre.placeholder = "Campo obligatorio";
+// AGREGAR CURSO
+botonAgregar.addEventListener("click", function(){
+
+    if(nombre.value.trim() === "" || docente.value.trim() === "" || duracion.value.trim() === ""){
+        alert("Todos los campos son obligatorios");
+        return;
     }
 
-    // Validar docente
-    if(docente.value.trim().length < 5){
-        docente.value = "";
-        docente.placeholder = "Campo Obligatorio";
-    }
+    const tarjeta = document.createElement("div");
+    tarjeta.classList.add("tarjeta");
 
-    // Validar duración
-    if(duracion.value.trim() === ""){
-        duracion.placeholder = "Campo obligatorio";
+    tarjeta.innerHTML = `
+        <div class="contenido-tarjeta">
+            <p>📌 Nombre del Curso: ${nombre.value}</p>
+            <p>👨‍🏫 Docente: ${docente.value}</p>
+            <p>⏱️ Duración: ${duracion.value}</p>
+            <button class="btn-eliminar">🗑️ Eliminar</button>
+        </div>
+    `;
+
+    contenedorCursos.appendChild(tarjeta);
+
+    // limpiar campos
+    nombre.value = "";
+    docente.value = "";
+    duracion.value = "";
+});
+
+
+// ELIMINR CURSO
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("btn-eliminar")){
+        const tarjeta = e.target.closest(".tarjeta");
+        tarjeta.remove();
     }
 
 });
