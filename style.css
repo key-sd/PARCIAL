@@ -62,63 +62,7 @@ body{
     margin: 0 auto;
 }
 
-.noticias{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    line-height: 30px;
-}
-
-.noticias ul{ 
-    background-color: #ffd500;
-    color: #002855;
-    font-weight: bold;
-    border-radius: 20px;
-    width: fit-content;
-    padding: 5px 15px;
-    list-style: none;
-    margin-bottom: 15px;
-}
-
-.noticias h2{
-    color: #002855;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.noticias h6{
-    color: #666;
-    font-size: 14px;
-    font-weight: normal;
-    margin-bottom: 15px;
-}
-
-.noticias p{
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.noticias button{
-    background-color: #002855;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.noticias button:hover{
-    background-color: #ffd500;
-    color: #002855;
-    transform: translateY(-2px);
-}
-
-.eventos{
+.filosofia{
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: white;
@@ -127,12 +71,22 @@ body{
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.eventos h2{
+.filosofia h2{
     color: #002855;
     font-size: 28px;
     margin-bottom: 20px;
     border-bottom: 3px solid #ffd500;
     padding-bottom: 10px;
+}
+
+.cursos{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
 }
 
 .contenedor-tarjeta{
@@ -207,6 +161,13 @@ body{
     color: #002855;
 }
 
+.contenedor-curso{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
 .aside{
     grid-column: 2/3;
     grid-row: 1/3;
@@ -251,108 +212,20 @@ body{
     color: white;
     transform: translateX(-5px);
 }
-
-.widget{
-    background: linear-gradient(135deg, #002855, #1a4a7a);
-    border-radius: 12px;
-    padding: 20px;
-    color: white;
-    margin-top: 10px;
-}
-
-.widget h4{
-    font-size: 18px;
-    margin-bottom: 5px;
-    opacity: 0.9;
-}
-
-.widget h1{
-    font-size: 42px;
-    margin: 10px 0;
-}
-
-.widget h5{
-    font-size: 16px;
-    font-weight: normal;
-    opacity: 0.9;
-}
-
-.widget:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,40,85,0.3);
-    transition: all 0.3s;
-}
-
-/* FOOTER COMPLETO - NUEVO ESTILO */
+/*Estilos del footer*/
 .footer{
     background-color: #002855;
     color: white;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 40px 20px 20px;
-}
-
-.footer-contenido{
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-seccion h3{
-    color: #ffd500;
-    font-size: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-seccion h3::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-    background-color: #ffd500;
-}
-
-.footer-seccion p{
-    line-height: 1.6;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-seccion ul{
-    list-style: none;
-}
-
-.footer-seccion li{
-    margin-bottom: 12px;
-}
-
-.footer-seccion a{
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s, padding-left 0.3s;
-    display: inline-block;
-}
-
-.footer-seccion a:hover{
-    color: #ffd500;
-    padding-left: 5px;
 }
 
 .footer-inferior{
     max-width: 1400px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 14px;
+    padding-top: 10px;
+    font-size: 16px;
 }
 
 .footer-inferior p{

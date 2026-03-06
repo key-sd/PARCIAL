@@ -16,96 +16,91 @@
         <input type="checkbox" id="menu">
         <label for="menu" class="hamburguesa">☰</label>
         <nav class="nav">
-            <a href="#">Inicio</a>
-            <a href="#">Cursos</a>
-            <a href="#">Calendario</a>
-            <a href="#">Contacto</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#curso">Cursos</a>
+            <a href="#calendario">Calendario</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <!--Cuerpo de la página o Main con GRID-->
     <main class="layout">
+        <div id="inicio">
+            <section class="filosofia" >
+                <h2>Filosofía institucional</h2>
+                <!--Contiene el incicio-->
+                <div class="contenedor-tarjeta">
+                    <div class="tarjeta">
+                        <div class="contenido-tarjeta">
+                            <h2>🎯 Nuestra Misión</h2>
+                            <p>Formar personas con altos niveles de competencia e innovación que los convierta en 
+                            agentes de cambio con sentido humano, comprometidos con el desarrollo y sostenibilidad global.</p>
+                        </div>
+                    </div>
 
-        <!--Sección de eventos-->
-        <section class="eventos">
-            <h2>Filosofía institucional</h2>
-            
-            <!--Contiene el incicio-->
-            <div class="contenedor-tarjeta">
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h2>🎯Nuestra Misión</h2>
-                        <p>Formar personas con altos niveles de competencia e innovación que los convierta en 
-                        agentes de cambio con sentido humano, comprometidos con el desarrollo y sostenibilidad global.</p>
+                    <div class="tarjeta">
+                        <div class="contenido-tarjeta">
+                            <h2>💡 Nuestra Visión</h2>
+                            <p>Ser una institución reconocida a nivel nacional e internacional como un ecosistema educativo 
+                            con estándares de calidad e innovación en la formación integral de personas con responsabilidad social.</p>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta">
+                        <div class="contenido-tarjeta">
+                            <h2>💎 Nuestros Valores</h2>
+                            <p>Responsabilidad, Justicia, Transparencia, Equidad, Solidaridad</p>
+                        </div>
                     </div>
                 </div>
+            </section>
+        </div>
 
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h2>💡Nuestra Visión</h2>
-                        <p>Ser una institución reconocida a nivel nacional e internacional como un ecosistema educativo 
-                        con estándares de calidad e innovación en la formación integral de personas con responsabilidad social.</p>
+        <div id="curso">  
+            <section class="cursos" >
+                <h2>Cursos disponibles</h2>
+                <div class="contenedor-curso">
+                    <div class="tarjeta">
+                        <div class="contenido-tarjeta">
+                            <p>📌 Nombre del Curso</p>
+                            <p>👨‍🏫 Docente</p>
+                            <p>⏱️ Duración</p>
+                            <button>🗑️ Eliminar</button>
+                        </div>
                     </div>
                 </div>
-
-                <div class="tarjeta">
-                    <div class="contenido-tarjeta">
-                        <h2>💡Nuestros Valores</h2>
-                        <p>Responsabilidad, Justicia, Transparencia, Equidad, Solidaridad</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!--SIDEBAR-->
         <aside class="aside">
-            <h3>Accesos rápidos</h3>
+            <h3>📋 Información</h3>
             <ul>
-                <li>📚 Campus Virtual</li>
-                <li>📖 Biblioteca Digital</li>
-                <li>✉️ Correo Institucional</li>
-                <li>🗓️ Calendario Académico</li>
-                <li>🖥️ Trámites en línea</li>
+                <li onclick="mostrarInfo('calendario')">🗓️ Calendario Académico</li>
+                <li onclick="mostrarInfo('contacto')">📲 Contacto</li>
+                <li onclick="mostrarInfo('ubicacion')">📍 Ubicación</li>
+                <li onclick="mostrarInfo('horarios')">⏰ Horarios de atención</li>
             </ul>
-            <div class="widget">
-                <h4>San Miguel</h4>
-                <h1>🌞 27°C</h1>
-                <h5>Soleado</h5>
-            </div>
         </aside>
+    
+    <!-- Aquí se muestra la información -->
+        <div id="infoDisplay">
+            <div class="mensaje-inicial">
+                👈 Haz clic en cualquier opción<br>
+                <small>para ver la información detallada</small>
+            </div>
+        </div>
+
     </main>
+
+
+
 
     <!-- FOOTER COMPLETO -->
     <footer class="footer">
-        <div class="footer-contenido">
-            <!-- Sección de Contacto -->
-            <div class="footer-seccion">
-                <h3>Contacto</h3>
-                <p>📍 Blvd. Universitario, San Miguel</p>
-                <p>📞 2600-1234</p>
-                <p>✉️ info@univ.edu.sv</p>
-            </div>
-
-            <!-- Sección de Enlaces útiles -->
-            <div class="footer-seccion">
-                <h3>Enlaces útiles</h3>
-                <ul>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                    <li><a href="#">Trabaja con nosotros</a></li>
-                </ul>
-            </div>
-
-            <!-- Sección de la universidad -->
-            <div class="footer-seccion">
-                <h3>Universidad de Oriente</h3>
-                <p>Formando profesionales con excelencia desde 1976</p>
-            </div>
-        </div>
-        
         <!-- Parte inferior del footer -->
         <div class="footer-inferior">
-            <p>© 2026 Universidad de Oriente | Keyri | Todos los derechos reservados</p>
+            <p>© 2026 Universidad de Oriente | Desarrollado por Karla Morales y Keyri Sánchez</p>
         </div>
     </footer>
 </body>
